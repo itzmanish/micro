@@ -10,13 +10,13 @@ import (
 	"strings"
 	"text/tabwriter"
 
+	"github.com/itzmanish/go-micro/v2/client"
+	cbytes "github.com/itzmanish/go-micro/v2/codec/bytes"
+	"github.com/itzmanish/go-micro/v2/config/cmd"
+	"github.com/itzmanish/go-micro/v2/util/file"
+	cliutil "github.com/itzmanish/micro/v2/client/cli/util"
+	clic "github.com/itzmanish/micro/v2/internal/command/cli"
 	"github.com/micro/cli/v2"
-	"github.com/micro/go-micro/v2/client"
-	cbytes "github.com/micro/go-micro/v2/codec/bytes"
-	"github.com/micro/go-micro/v2/config/cmd"
-	"github.com/micro/go-micro/v2/util/file"
-	cliutil "github.com/micro/micro/v2/client/cli/util"
-	clic "github.com/micro/micro/v2/internal/command/cli"
 )
 
 type exec func(*cli.Context, []string) ([]byte, error)

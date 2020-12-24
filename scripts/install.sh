@@ -136,7 +136,7 @@ fail_trap() {
     result=$?
     if [ "$result" != "0" ]; then
         echo "Failed to install micro"
-        echo "For support, please file an issue in https://github.com/micro/micro/issues"
+        echo "For support, please file an issue in https://github.com/itzmanish/micro/issues"
     fi
     cleanup
     exit $result

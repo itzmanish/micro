@@ -13,17 +13,17 @@ import (
 	"text/tabwriter"
 	"time"
 
+	"github.com/itzmanish/go-micro/v2"
+	"github.com/itzmanish/go-micro/v2/config/cmd"
+	log "github.com/itzmanish/go-micro/v2/logger"
+	"github.com/itzmanish/go-micro/v2/runtime"
+	"github.com/itzmanish/go-micro/v2/runtime/local/git"
+	srvRuntime "github.com/itzmanish/go-micro/v2/runtime/service"
+	"github.com/itzmanish/go-micro/v2/util/file"
+	cliutil "github.com/itzmanish/micro/v2/client/cli/util"
+	"github.com/itzmanish/micro/v2/internal/client"
+	"github.com/itzmanish/micro/v2/service/runtime/handler"
 	"github.com/micro/cli/v2"
-	"github.com/micro/go-micro/v2"
-	"github.com/micro/go-micro/v2/config/cmd"
-	log "github.com/micro/go-micro/v2/logger"
-	"github.com/micro/go-micro/v2/runtime"
-	"github.com/micro/go-micro/v2/runtime/local/git"
-	srvRuntime "github.com/micro/go-micro/v2/runtime/service"
-	"github.com/micro/go-micro/v2/util/file"
-	cliutil "github.com/micro/micro/v2/client/cli/util"
-	"github.com/micro/micro/v2/internal/client"
-	"github.com/micro/micro/v2/service/runtime/handler"
 )
 
 const (

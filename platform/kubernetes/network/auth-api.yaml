@@ -8,8 +8,8 @@ metadata:
     micro: runtime
 spec:
   ports:
-  - port: 8000
-    protocol: TCP
+    - port: 8000
+      protocol: TCP
   selector:
     name: micro-auth-api
     micro: runtime
@@ -23,11 +23,11 @@ metadata:
     micro: runtime
     name: micro-auth-api
   annotations:
-    name: "go.micro.api.auth"
-    version: "latest"
-    source: "github.com/micro/micro"
-    owner: "micro"
-    group: "micro"
+    name: 'go.micro.api.auth'
+    version: 'latest'
+    source: 'github.com/itzmanish/micro'
+    owner: 'micro'
+    group: 'micro'
 spec:
   replicas: 1
   selector:
@@ -41,25 +41,25 @@ spec:
         micro: runtime
     spec:
       containers:
-      - name: auth
-        env:
-        - name: MICRO_LOG_LEVEL
-          value: "debug"
-        - name: MICRO_BROKER
-          value: "nats"
-        - name: MICRO_BROKER_ADDRESS
-          value: "nats-cluster"
-        - name: MICRO_REGISTRY
-          value: "etcd"
-        - name: MICRO_REGISTRY_ADDRESS
-          value: "etcd-cluster-client"
-        - name: MICRO_AUTH
-          value: "service"
-        args:
-        - auth
-        - api
-        image: micro/micro
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8011
-          name: auth-port
+        - name: auth
+          env:
+            - name: MICRO_LOG_LEVEL
+              value: 'debug'
+            - name: MICRO_BROKER
+              value: 'nats'
+            - name: MICRO_BROKER_ADDRESS
+              value: 'nats-cluster'
+            - name: MICRO_REGISTRY
+              value: 'etcd'
+            - name: MICRO_REGISTRY_ADDRESS
+              value: 'etcd-cluster-client'
+            - name: MICRO_AUTH
+              value: 'service'
+          args:
+            - auth
+            - api
+          image: micro/micro
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8011
+              name: auth-port

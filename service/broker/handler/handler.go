@@ -3,11 +3,11 @@ package handler
 import (
 	"context"
 
-	"github.com/micro/go-micro/v2/broker"
-	pb "github.com/micro/go-micro/v2/broker/service/proto"
-	"github.com/micro/go-micro/v2/errors"
-	log "github.com/micro/go-micro/v2/logger"
-	"github.com/micro/micro/v2/internal/namespace"
+	"github.com/itzmanish/go-micro/v2/broker"
+	pb "github.com/itzmanish/go-micro/v2/broker/service/proto"
+	"github.com/itzmanish/go-micro/v2/errors"
+	log "github.com/itzmanish/go-micro/v2/logger"
+	"github.com/itzmanish/micro/v2/internal/namespace"
 )
 
 type Broker struct {

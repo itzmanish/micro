@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/itzmanish/go-micro/v2"
+	"github.com/itzmanish/go-micro/v2/client"
+	proto "github.com/itzmanish/go-micro/v2/debug/service/proto"
+	log "github.com/itzmanish/go-micro/v2/logger"
+	mcli "github.com/itzmanish/micro/v2/client/cli"
+	qcli "github.com/itzmanish/micro/v2/internal/command/cli"
 	"github.com/micro/cli/v2"
-	"github.com/micro/go-micro/v2"
-	"github.com/micro/go-micro/v2/client"
-	proto "github.com/micro/go-micro/v2/debug/service/proto"
-	log "github.com/micro/go-micro/v2/logger"
-	mcli "github.com/micro/micro/v2/client/cli"
-	qcli "github.com/micro/micro/v2/internal/command/cli"
 	"golang.org/x/net/context"
 )
 

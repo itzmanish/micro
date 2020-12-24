@@ -3,10 +3,10 @@ package template
 var (
 	Module = `module {{.Dir}}
 
-go 1.13
+go 1.16
 
-// This can be removed once etcd becomes go gettable, version 3.4 and 3.5 is not,
+// Temporary fix for etcd with grpc 1.27
 // see https://github.com/etcd-io/etcd/issues/11154 and https://github.com/etcd-io/etcd/issues/11931.
-replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
+replace github.com/coreos/etcd => github.com/ozonru/etcd v3.3.20-grpc1.27-origmodule+incompatible
 `
 )

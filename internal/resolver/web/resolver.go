@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"strings"
 
-	res "github.com/micro/go-micro/v2/api/resolver"
-	"github.com/micro/go-micro/v2/client/selector"
-	"github.com/micro/micro/v2/internal/namespace"
+	res "github.com/itzmanish/go-micro/v2/api/resolver"
+	"github.com/itzmanish/go-micro/v2/client/selector"
+	"github.com/itzmanish/micro/v2/internal/namespace"
 	"golang.org/x/net/publicsuffix"
 )
 
@@ -94,7 +94,7 @@ func (r *Resolver) Info(req *http.Request) (string, string, bool) {
 
 // Resolve replaces the values of Host, Path, Scheme to calla backend service
 // It accounts for subdomains for service names based on namespace
-func (r *Resolver) Resolve(req *http.Request) (*res.Endpoint, error) {
+func (r *Resolver) Resolve(req *http.Request, opts ...res.ResolveOption) (*res.Endpoint, error) {
 	// get host, namespace and if its an internal request
 	host, _, _ := r.Info(req)
 

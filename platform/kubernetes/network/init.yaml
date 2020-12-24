@@ -8,28 +8,28 @@ kind: ClusterRole
 metadata:
   name: micro-init
 rules:
-- apiGroups:
-  - ""
-  resources:
-  - pods
-  verbs:
-  - create
-  - update
-  - delete
-  - list
-  - patch
-  - watch
-- apiGroups:
-  - "apps"
-  resources:
-  - deployments
-  verbs:
-  - create
-  - update
-  - delete
-  - list
-  - patch
-  - watch
+  - apiGroups:
+      - ''
+    resources:
+      - pods
+    verbs:
+      - create
+      - update
+      - delete
+      - list
+      - patch
+      - watch
+  - apiGroups:
+      - 'apps'
+    resources:
+      - deployments
+    verbs:
+      - create
+      - update
+      - delete
+      - list
+      - patch
+      - watch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -40,8 +40,8 @@ roleRef:
   kind: ClusterRole
   name: micro-init
 subjects:
-- kind: ServiceAccount
-  name: micro-init
+  - kind: ServiceAccount
+    name: micro-init
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -52,11 +52,11 @@ metadata:
     micro: runtime
     name: micro-init
   annotations:
-    name: "go.micro.init"
-    version: "latest"
-    source: "github.com/micro/micro"
-    owner: "micro"
-    group: "micro"
+    name: 'go.micro.init'
+    version: 'latest'
+    source: 'github.com/itzmanish/micro'
+    owner: 'micro'
+    group: 'micro'
 spec:
   replicas: 1
   selector:
@@ -71,15 +71,15 @@ spec:
     spec:
       serviceAccountName: micro-init
       containers:
-      - name: init
-        env:
-        - name: MICRO_NAMESPACE
-          value: "micro"
-        - name: MICRO_RUNTIME
-          value: "kubernetes"
-        - name: MICRO_LOG_LEVEL
-          value: "debug"
-        args:
-        - init
-        image: micro/micro
-        imagePullPolicy: Always
+        - name: init
+          env:
+            - name: MICRO_NAMESPACE
+              value: 'micro'
+            - name: MICRO_RUNTIME
+              value: 'kubernetes'
+            - name: MICRO_LOG_LEVEL
+              value: 'debug'
+          args:
+            - init
+          image: micro/micro
+          imagePullPolicy: Always

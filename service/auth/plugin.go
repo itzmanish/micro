@@ -3,7 +3,7 @@ package auth
 import (
 	"fmt"
 
-	"github.com/micro/micro/v2/plugin"
+	"github.com/itzmanish/micro/v2/plugin"
 )
 
 var (

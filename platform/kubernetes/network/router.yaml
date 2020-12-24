@@ -7,11 +7,11 @@ metadata:
     micro: runtime
     name: micro-router
   annotations:
-    name: "go.micro.router"
-    version: "latest"
-    source: "github.com/micro/micro"
-    owner: "micro"
-    group: "micro"
+    name: 'go.micro.router'
+    version: 'latest'
+    source: 'github.com/itzmanish/micro'
+    owner: 'micro'
+    group: 'micro'
 spec:
   replicas: 1
   selector:
@@ -25,36 +25,36 @@ spec:
         micro: runtime
     spec:
       containers:
-      - name: router
-        env:
-        - name: MICRO_AUTH
-          value: "jwt"
-        - name: MICRO_AUTH_PUBLIC_KEY
-          valueFrom:
-            secretKeyRef:
-              name: micro-keypair
-              key: public
-        - name: MICRO_AUTH_PRIVATE_KEY
-          valueFrom:
-            secretKeyRef:
-              name: micro-keypair
-              key: private
-        - name: MICRO_LOG_LEVEL
-          value: "trace"
-        - name: MICRO_BROKER
-          value: "nats"
-        - name: MICRO_BROKER_ADDRESS
-          value: "nats-cluster"
-        - name: MICRO_REGISTRY
-          value: "etcd"
-        - name: MICRO_REGISTRY_ADDRESS
-          value: "etcd-cluster-client"
-        - name: MICRO_ENABLE_ACME
-          value: "true"
-        args:
-        - router
-        image: micro/micro
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8084
-          name: router-port
+        - name: router
+          env:
+            - name: MICRO_AUTH
+              value: 'jwt'
+            - name: MICRO_AUTH_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: micro-keypair
+                  key: public
+            - name: MICRO_AUTH_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: micro-keypair
+                  key: private
+            - name: MICRO_LOG_LEVEL
+              value: 'trace'
+            - name: MICRO_BROKER
+              value: 'nats'
+            - name: MICRO_BROKER_ADDRESS
+              value: 'nats-cluster'
+            - name: MICRO_REGISTRY
+              value: 'etcd'
+            - name: MICRO_REGISTRY_ADDRESS
+              value: 'etcd-cluster-client'
+            - name: MICRO_ENABLE_ACME
+              value: 'true'
+          args:
+            - router
+          image: micro/micro
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8084
+              name: router-port

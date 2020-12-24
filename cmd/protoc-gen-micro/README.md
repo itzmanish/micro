@@ -5,10 +5,10 @@ This is protobuf code generation for micro. We use protoc-gen-micro to reduce bo
 ## Install
 
 ```
-go get github.com/micro/micro/v2/cmd/protoc-gen-micro@master
+go get github.com/itzmanish/micro/v2/cmd/protoc-gen-micro@master
 ```
 
-Also required: 
+Also required:
 
 - [protoc](https://github.com/google/protobuf)
 - [protoc-gen-go](https://github.com/golang/protobuf)
@@ -112,7 +112,7 @@ message Response {
 }
 ```
 
-The proto generates a `RegisterGreeterHandler` function with a [api.Endpoint](https://godoc.org/github.com/micro/go-micro/api#Endpoint). 
+The proto generates a `RegisterGreeterHandler` function with a [api.Endpoint](https://godoc.org/github.com/itzmanish/go-micro/api#Endpoint).
 
 ```diff
 func RegisterGreeterHandler(s server.Server, hdlr GreeterHandler, opts ...server.HandlerOption) error {
@@ -135,4 +135,4 @@ func RegisterGreeterHandler(s server.Server, hdlr GreeterHandler, opts ...server
 
 ## LICENSE
 
-protoc-gen-micro is a liberal reuse of protoc-gen-go hence we maintain the original license 
+protoc-gen-micro is a liberal reuse of protoc-gen-go hence we maintain the original license

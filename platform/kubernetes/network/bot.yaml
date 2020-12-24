@@ -7,11 +7,11 @@ metadata:
     micro: runtime
     name: micro-bot
   annotations:
-    name: "go.micro.bot"
-    version: "latest"
-    source: "github.com/micro/micro"
-    owner: "micro"
-    group: "micro"
+    name: 'go.micro.bot'
+    version: 'latest'
+    source: 'github.com/itzmanish/micro'
+    owner: 'micro'
+    group: 'micro'
 spec:
   replicas: 1
   selector:
@@ -26,33 +26,27 @@ spec:
     spec:
       containers:
         - name: bot
-          command: [
-            "/micro",
-            "bot",
-            "--inputs=slack"
-          ]
+          command: ['/micro', 'bot', '--inputs=slack']
           image: micro/micro
           imagePullPolicy: Always
           env:
-          - name: MICRO_AUTH
-            value: "service"
-          - name: MICRO_AUTH_PUBLIC_KEY
-            valueFrom:
-              secretKeyRef:
-                name: micro-keypair
-                key: public
-          - name: MICRO_BROKER
-            value: "nats"
-          - name: MICRO_BROKER_ADDRESS
-            value: "nats-cluster"
-          - name: MICRO_REGISTRY
-            value: "etcd"
-          - name: MICRO_REGISTRY_ADDRESS
-            value: "etcd-cluster-client"
-          - name: MICRO_SLACK_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: micro-slack
-                key: token
-
-
+            - name: MICRO_AUTH
+              value: 'service'
+            - name: MICRO_AUTH_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: micro-keypair
+                  key: public
+            - name: MICRO_BROKER
+              value: 'nats'
+            - name: MICRO_BROKER_ADDRESS
+              value: 'nats-cluster'
+            - name: MICRO_REGISTRY
+              value: 'etcd'
+            - name: MICRO_REGISTRY_ADDRESS
+              value: 'etcd-cluster-client'
+            - name: MICRO_SLACK_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: micro-slack
+                  key: token

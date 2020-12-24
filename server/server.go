@@ -5,14 +5,14 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/itzmanish/go-micro/v2"
+	"github.com/itzmanish/go-micro/v2/config/cmd"
+	log "github.com/itzmanish/go-micro/v2/logger"
+	gorun "github.com/itzmanish/go-micro/v2/runtime"
+	handler "github.com/itzmanish/go-micro/v2/util/file"
+	"github.com/itzmanish/micro/v2/internal/platform"
+	"github.com/itzmanish/micro/v2/internal/update"
 	"github.com/micro/cli/v2"
-	"github.com/micro/go-micro/v2"
-	"github.com/micro/go-micro/v2/config/cmd"
-	log "github.com/micro/go-micro/v2/logger"
-	gorun "github.com/micro/go-micro/v2/runtime"
-	handler "github.com/micro/go-micro/v2/util/file"
-	"github.com/micro/micro/v2/internal/platform"
-	"github.com/micro/micro/v2/internal/update"
 )
 
 var (

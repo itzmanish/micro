@@ -7,10 +7,10 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/itzmanish/go-micro/v2/registry"
+	"github.com/itzmanish/go-micro/v2/util/backoff"
+	"github.com/itzmanish/micro/v2/plugin"
 	"github.com/micro/cli/v2"
-	"github.com/micro/go-micro/v2/registry"
-	"github.com/micro/go-micro/v2/util/backoff"
-	"github.com/micro/micro/v2/plugin"
 )
 
 func init() {

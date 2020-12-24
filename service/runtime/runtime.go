@@ -4,15 +4,15 @@ package runtime
 import (
 	"os"
 
+	"github.com/itzmanish/go-micro/v2"
+	"github.com/itzmanish/go-micro/v2/config/cmd"
+	log "github.com/itzmanish/go-micro/v2/logger"
+	"github.com/itzmanish/go-micro/v2/runtime"
+	pb "github.com/itzmanish/go-micro/v2/runtime/service/proto"
+	"github.com/itzmanish/micro/v2/service/runtime/handler"
+	"github.com/itzmanish/micro/v2/service/runtime/manager"
+	"github.com/itzmanish/micro/v2/service/runtime/profile"
 	"github.com/micro/cli/v2"
-	"github.com/micro/go-micro/v2"
-	"github.com/micro/go-micro/v2/config/cmd"
-	log "github.com/micro/go-micro/v2/logger"
-	"github.com/micro/go-micro/v2/runtime"
-	pb "github.com/micro/go-micro/v2/runtime/service/proto"
-	"github.com/micro/micro/v2/service/runtime/handler"
-	"github.com/micro/micro/v2/service/runtime/manager"
-	"github.com/micro/micro/v2/service/runtime/profile"
 )
 
 var (

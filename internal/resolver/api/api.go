@@ -4,7 +4,7 @@ package micro
 import (
 	"net/http"
 
-	"github.com/micro/go-micro/v2/api/resolver"
+	"github.com/itzmanish/go-micro/v2/api/resolver"
 )
 
 // default resolver for legacy purposes
@@ -15,7 +15,7 @@ type Resolver struct {
 	Options resolver.Options
 }
 
-func (r *Resolver) Resolve(req *http.Request) (*resolver.Endpoint, error) {
+func (r *Resolver) Resolve(req *http.Request, opts ...resolver.ResolveOption) (*resolver.Endpoint, error) {
 	var name, method string
 
 	switch r.Options.Handler {

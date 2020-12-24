@@ -5,17 +5,17 @@ import (
 	"os"
 	"strings"
 
+	"github.com/itzmanish/go-micro/v2"
+	log "github.com/itzmanish/go-micro/v2/logger"
+	"github.com/itzmanish/go-micro/v2/proxy"
+	"github.com/itzmanish/go-micro/v2/proxy/grpc"
+	"github.com/itzmanish/go-micro/v2/proxy/http"
+	"github.com/itzmanish/go-micro/v2/proxy/mucp"
+	"github.com/itzmanish/go-micro/v2/runtime"
+	"github.com/itzmanish/go-micro/v2/server"
+	"github.com/itzmanish/micro/v2/service/handler/exec"
+	"github.com/itzmanish/micro/v2/service/handler/file"
 	"github.com/micro/cli/v2"
-	"github.com/micro/go-micro/v2"
-	log "github.com/micro/go-micro/v2/logger"
-	"github.com/micro/go-micro/v2/proxy"
-	"github.com/micro/go-micro/v2/proxy/grpc"
-	"github.com/micro/go-micro/v2/proxy/http"
-	"github.com/micro/go-micro/v2/proxy/mucp"
-	"github.com/micro/go-micro/v2/runtime"
-	"github.com/micro/go-micro/v2/server"
-	"github.com/micro/micro/v2/service/handler/exec"
-	"github.com/micro/micro/v2/service/handler/file"
 )
 
 func Run(ctx *cli.Context, opts ...micro.Option) {

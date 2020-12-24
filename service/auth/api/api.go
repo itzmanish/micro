@@ -1,11 +1,11 @@
 package api
 
 import (
+	"github.com/itzmanish/go-micro/v2"
+	log "github.com/itzmanish/go-micro/v2/logger"
 	"github.com/micro/cli/v2"
-	"github.com/micro/go-micro/v2"
-	log "github.com/micro/go-micro/v2/logger"
 
-	pb "github.com/micro/micro/v2/service/auth/api/proto"
+	pb "github.com/itzmanish/micro/v2/service/auth/api/proto"
 )
 
 var (

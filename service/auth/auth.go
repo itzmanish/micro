@@ -6,23 +6,23 @@ import (
 	"strings"
 	"time"
 
+	"github.com/itzmanish/go-micro/v2"
+	"github.com/itzmanish/go-micro/v2/auth"
+	srvAuth "github.com/itzmanish/go-micro/v2/auth/service"
+	pb "github.com/itzmanish/go-micro/v2/auth/service/proto"
+	"github.com/itzmanish/go-micro/v2/auth/token"
+	"github.com/itzmanish/go-micro/v2/auth/token/jwt"
+	"github.com/itzmanish/go-micro/v2/config/cmd"
+	"github.com/itzmanish/go-micro/v2/errors"
+	log "github.com/itzmanish/go-micro/v2/logger"
+	cliutil "github.com/itzmanish/micro/v2/client/cli/util"
+	"github.com/itzmanish/micro/v2/internal/client"
+	"github.com/itzmanish/micro/v2/internal/config"
+	"github.com/itzmanish/micro/v2/internal/helper"
+	"github.com/itzmanish/micro/v2/service/auth/api"
+	authHandler "github.com/itzmanish/micro/v2/service/auth/handler/auth"
+	rulesHandler "github.com/itzmanish/micro/v2/service/auth/handler/rules"
 	"github.com/micro/cli/v2"
-	"github.com/micro/go-micro/v2"
-	"github.com/micro/go-micro/v2/auth"
-	srvAuth "github.com/micro/go-micro/v2/auth/service"
-	pb "github.com/micro/go-micro/v2/auth/service/proto"
-	"github.com/micro/go-micro/v2/auth/token"
-	"github.com/micro/go-micro/v2/auth/token/jwt"
-	"github.com/micro/go-micro/v2/config/cmd"
-	"github.com/micro/go-micro/v2/errors"
-	log "github.com/micro/go-micro/v2/logger"
-	cliutil "github.com/micro/micro/v2/client/cli/util"
-	"github.com/micro/micro/v2/internal/client"
-	"github.com/micro/micro/v2/internal/config"
-	"github.com/micro/micro/v2/internal/helper"
-	"github.com/micro/micro/v2/service/auth/api"
-	authHandler "github.com/micro/micro/v2/service/auth/handler/auth"
-	rulesHandler "github.com/micro/micro/v2/service/auth/handler/rules"
 )
 
 var (
@@ -143,7 +143,7 @@ func authFromContext(ctx *cli.Context) auth.Auth {
 		return *cmd.DefaultCmd.Options().Auth
 	}
 	return srvAuth.NewAuth(
-		auth.WithClient(client.New(ctx)),
+		auth.Client(client.New(ctx)),
 	)
 }
 

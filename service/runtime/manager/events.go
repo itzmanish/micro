@@ -6,10 +6,10 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/micro/go-micro/v2/logger"
-	"github.com/micro/go-micro/v2/runtime"
-	"github.com/micro/go-micro/v2/store"
-	"github.com/micro/micro/v2/internal/namespace"
+	"github.com/itzmanish/go-micro/v2/logger"
+	"github.com/itzmanish/go-micro/v2/runtime"
+	"github.com/itzmanish/go-micro/v2/store"
+	"github.com/itzmanish/micro/v2/internal/namespace"
 )
 
 var (

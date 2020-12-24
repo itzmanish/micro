@@ -6,12 +6,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/micro/go-micro/v2/auth"
-	pb "github.com/micro/go-micro/v2/auth/service/proto"
-	"github.com/micro/go-micro/v2/errors"
-	"github.com/micro/go-micro/v2/store"
-	memStore "github.com/micro/go-micro/v2/store/memory"
-	"github.com/micro/micro/v2/internal/namespace"
+	"github.com/itzmanish/go-micro/v2/auth"
+	pb "github.com/itzmanish/go-micro/v2/auth/service/proto"
+	"github.com/itzmanish/go-micro/v2/errors"
+	"github.com/itzmanish/go-micro/v2/store"
+	memStore "github.com/itzmanish/go-micro/v2/store/memory"
+	"github.com/itzmanish/micro/v2/internal/namespace"
 )
 
 const (

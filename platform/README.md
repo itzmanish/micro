@@ -4,8 +4,8 @@ This directory serves as platform bootstrapping for Micro.
 
 ## Overview
 
-The platform provides **Micro as a Service** as a fully managed solution. The platform is 
-bootstrapped onto Kubernetes on any major cloud provider, including load balancing and 
+The platform provides **Micro as a Service** as a fully managed solution. The platform is
+bootstrapped onto Kubernetes on any major cloud provider, including load balancing and
 dns management. This repository serves as the entrypoint and single location for all bootstrapping
 related source code and documentation.
 
@@ -14,7 +14,7 @@ related source code and documentation.
 Install the platform binary
 
 ```
-go get github.com/micro/micro/cmd/platform
+go get github.com/itzmanish/micro/cmd/platform
 ```
 
 To bootstrap the platform, create a [config.yaml](./config-test.yaml), and prepare a AWS S3 bucket
@@ -38,4 +38,3 @@ Configuration options can be set with viper, for example
 setting the environment variable `MICRO_STATE_STORE`.
 
 See the [docs](docs) for more info.
-
