@@ -4,10 +4,7 @@ go 1.15
 
 replace github.com/coreos/etcd => github.com/ozonru/etcd v3.3.20-grpc1.27-origmodule+incompatible
 
-replace github.com/itzmanish/go-micro/v2 => ../go-micro
-
 require (
-	github.com/itzmanish/go-micro/v2 v2.9.5
 	github.com/aws/aws-sdk-go v1.23.0
 	github.com/boltdb/bolt v1.3.1
 	github.com/chzyer/logex v1.1.10 // indirect
@@ -21,6 +18,7 @@ require (
 	github.com/google/uuid v1.2.0
 	github.com/gorilla/handlers v1.4.2
 	github.com/gorilla/mux v1.7.3
+	github.com/itzmanish/go-micro/v2 v2.9.5
 	github.com/micro/cli/v2 v2.1.2
 	github.com/miekg/dns v1.1.38
 	github.com/netdata/go-orchestrator v0.0.0-20190905093727-c793edba0e8f
