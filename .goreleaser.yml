@@ -1,9 +1,9 @@
 project_name: micro
 release:
   github:
-    owner: micro
+    owner: itzmanish
     name: micro
-  name_template: 'Release {{.Tag}}'
+  name_template: "Release {{.Tag}}"
 before:
   hooks:
     - go mod download
@@ -27,7 +27,7 @@ builds:
     hooks:
       post: .github/workflows/upx.sh
 archives:
-  - name_template: '{{.ProjectName}}-{{.Tag}}-{{.Os}}-{{.Arch}}{{if .Arm}}{{.Arm}}{{end}}'
+  - name_template: "{{.ProjectName}}-{{.Tag}}-{{.Os}}-{{.Arch}}{{if .Arm}}{{.Arm}}{{end}}"
     replacements:
       darwin: darwin
       linux: linux
@@ -43,13 +43,13 @@ archives:
       - LICENSE
       - README.md
 checksum:
-  name_template: 'checksums.txt'
+  name_template: "checksums.txt"
   algorithm: sha256
 snapshot:
-  name_template: '{{ .Tag }}-next'
+  name_template: "{{ .Tag }}-next"
 changelog:
   sort: asc
   filters:
     exclude:
-      - '^docs:'
-      - '^test:'
+      - "^docs:"
+      - "^test:"
