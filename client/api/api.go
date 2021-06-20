@@ -9,7 +9,6 @@ import (
 
 	"github.com/go-acme/lego/v3/providers/dns/cloudflare"
 	"github.com/gorilla/mux"
-	"github.com/micro/cli/v2"
 	"github.com/itzmanish/go-micro/v2"
 	ahandler "github.com/itzmanish/go-micro/v2/api/handler"
 	aapi "github.com/itzmanish/go-micro/v2/api/handler/api"
@@ -37,6 +36,7 @@ import (
 	rrmicro "github.com/itzmanish/micro/v2/internal/resolver/api"
 	"github.com/itzmanish/micro/v2/internal/stats"
 	"github.com/itzmanish/micro/v2/plugin"
+	"github.com/micro/cli/v2"
 )
 
 var (

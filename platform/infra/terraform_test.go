@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+// TODO: Fix this in local
 func TestTerraformModule(t *testing.T) {
 	if e := os.Getenv("IN_TRAVIS_CI"); e == "yes" {
 		t.Skip("In Travis CI")
@@ -18,7 +19,7 @@ func TestTerraformModule(t *testing.T) {
 		ID:     fmt.Sprintf("test-module-%d", rand.Int31()),
 		Name:   "test",
 		Path:   path,
-		Source: "./network",
+		Source: "../kubernetes/network",
 		DryRun: true,
 	}
 	defer testModule.Finalise()
