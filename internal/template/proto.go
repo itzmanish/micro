@@ -4,6 +4,7 @@ var (
 	ProtoFNC = `syntax = "proto3";
 
 package {{dehyphen .FQDN}};
+option go_package="proto/{{.Alias}};{{.Alias}}pb";
 
 service {{title .Alias}} {
 	rpc Call(Request) returns (Response) {}
@@ -25,6 +26,7 @@ message Response {
 	ProtoSRV = `syntax = "proto3";
 
 package {{dehyphen .FQDN}};
+option go_package="proto/{{.Alias}}";
 
 service {{title .Alias}} {
 	rpc Call(Request) returns (Response) {}
