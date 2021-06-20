@@ -1,4 +1,4 @@
-# Micro [![License](https://img.shields.io/:license-apache-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Go Reference](https://pkg.go.dev/badge/github.com/itzmanish/micro/v2.svg)](https://pkg.go.dev/github.com/itzmanish/micro/v2) [![Build Status](https://travis-ci.com/itzmanish/micro.svg?branch=master)](https://travis-ci.com/itzmanish/micro) [![Go Report Card](https://goreportcard.com/badge/github.com/itzmanish/micro)](https://goreportcard.com/report/github.com/itzmanish/micro)
+# Micro [![License](https://img.shields.io/:license-apache-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Go Reference](https://pkg.go.dev/badge/github.com/itzmanish/micro/v2.svg)](https://pkg.go.dev/github.com/itzmanish/micro/v2) [![Tests](https://github.com/itzmanish/micro/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/itzmanish/micro/actions/workflows/tests.yml) [![Go Report Card](https://goreportcard.com/badge/github.com/itzmanish/micro)](https://goreportcard.com/report/github.com/itzmanish/micro)
 
 Micro is a distributed systems runtime for the Cloud and beyond.
 
