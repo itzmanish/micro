@@ -391,6 +391,8 @@ github.com/itzmanish/go-micro/v2 v2.9.5 h1:V1bUuen3vT+lIwG443T0GGGSN1DS9afv17ONp
 github.com/itzmanish/go-micro/v2 v2.9.5/go.mod h1:Q5XN2i5Z7TDdpoA3QuFCs3X2r5z3KbF70UscPNSViFY=
 github.com/itzmanish/go-micro/v2 v2.10.0 h1:dwwJYW0BqODEKaZ0ypwPQy5DQ++S78Dyq3EQ1RAsJdA=
 github.com/itzmanish/go-micro/v2 v2.10.0/go.mod h1:Q5XN2i5Z7TDdpoA3QuFCs3X2r5z3KbF70UscPNSViFY=
+github.com/itzmanish/go-micro/v2 v2.10.1 h1:izCFsqB+Tei/CVogPQ3eT2AQNo+QhySWLrt2iWq5ChE=
+github.com/itzmanish/go-micro/v2 v2.10.1/go.mod h1:Q5XN2i5Z7TDdpoA3QuFCs3X2r5z3KbF70UscPNSViFY=
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOlocH6Fxy8MmwDt+yVQYULKfN0RoTN8A=
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/jellevandenhooff/dkim v0.0.0-20150330215556-f50fe3d243e1/go.mod h1:E0B/fFc00Y+Rasa88328GlI/XbtyysCtTHZS8h7IrBU=
